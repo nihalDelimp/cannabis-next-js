@@ -55,15 +55,15 @@ const index = () => {
   return (
     <div>
 
-                 <Head>
-                
-<meta property="og:image" content="https://d1zbg1tvj6dkkl.cloudfront.net/images/posts/news/qXrQvulF3mXJExPl09DYOmBWDlUHPN5YTm0NuIw5.jpg" />
-<meta property="og:image:secure_url" content="https://d1zbg1tvj6dkkl.cloudfront.net/images/posts/news/qXrQvulF3mXJExPl09DYOmBWDlUHPN5YTm0NuIw5.jpg" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="627" />
-<meta property="twitter:title" content=" " />
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://d1zbg1tvj6dkkl.cloudfront.net/images/posts/news/qXrQvulF3mXJExPl09DYOmBWDlUHPN5YTm0NuIw5.jpg" />
+<Head>
+<meta property="og:url" content="https://www.example.com"/>
+<meta property="og:title" content="Open Graph Title"/>
+<meta property="og:description" content="Open Graph Description"/>
+<meta property="og:image" content="https://d1zbg1tvj6dkkl.cloudfront.net/images/posts/news/qXrQvulF3mXJExPl09DYOmBWDlUHPN5YTm0NuIw5.jpg"></meta>
+<meta property="og:site_name" content="YourSiteName"></meta>
+<meta name="twitter:card" content="summary_large_image"></meta>
+<meta name="twitter:site" content="@site"></meta>
+<meta name="twitter:creator" content="@handle"></meta>
 </Head>
 
    {/*             
