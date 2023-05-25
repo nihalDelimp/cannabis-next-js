@@ -55,9 +55,8 @@ const index = () => {
       "canabis  capitol is the next step in the evolution of the internet and, possibly, the organization of society. According to legend, Web 1.0 was the era of decentralized, open protocols, when the majority of internet activity consisted of visiting individual static webpages.",
     imageUrl:
       "https://images.unsplash.com/photo-1684848140767-92b247834dc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
-    type: "article",
-    twitterHandle: "https://twitter.com/ugwutotheeshoes",
-    date: "17/03/2022"
+    type: "just testing ",
+
   };
   return (
     <div>
@@ -69,11 +68,8 @@ const index = () => {
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.imageUrl} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content={meta.twitterHandle} />
-        <meta name="twitter:title" content={meta.title} />
-        <meta name="twitter:description" content={meta.description} />
-        <meta name="twitter:image" content={meta.imageUrl} />
+
+        
         
       </Head>
 
