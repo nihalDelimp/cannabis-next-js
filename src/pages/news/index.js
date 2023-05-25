@@ -2,13 +2,12 @@ import Image from 'next/image'
 import React, { useState, useEffect } from 'react'
 import newsBanner from "../../assets/news-banner.jpg"
 import HomePost from '../Home/HomePost'
-import axios from 'axios'
+
 import Pagination from '@/Common/Pagination'
 import NewsPost from './NewsPost'
 import { withoutAuthAxios } from '@/config'
 import Head from 'next/head'
 
-import { CldOgImage } from 'next-cloudinary';
 
 
 
