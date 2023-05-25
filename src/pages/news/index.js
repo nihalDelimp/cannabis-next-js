@@ -74,7 +74,7 @@ const index = () => {
                             <div className="leftWrap">
                                 <div className="leftWrapin ">
                                     <div className="cardMain list-wrapper">
-
+                 <h1>Test</h1>
              <NewsPost postsData={data}     /> 
     
              </div>
