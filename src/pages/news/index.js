@@ -51,17 +51,23 @@ const index = () => {
 
       <Head>
 
-        <title>Cool Title</title>
-        <meta name="description" content="Checkout our cool page" key="desc" />
-        <meta property="og:title" content="Social Title for Cool Page" />
-        <meta
-          property="og:description"
-          content="And a social description for our cool page"
-        />
-        <meta
-          property="og:image"
-          content="https://example.com/images/cool-page.jpg"
-        />
+
+        <title>Nihal</title>
+        <meta name="description" content="Hello Test" />
+
+        <meta property="og:url" content="https://cannabis-next-js.vercel.app/news" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Nihal" />
+        <meta property="og:description" content="Hello Test" />
+        <meta property="og:image" content="https://bountifield.org/wp-content/uploads/2020/03/social-images_Facebook-Photo-1200x630px.jpg.webp" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="cannabis-next-js.vercel.app" />
+        <meta property="twitter:url" content="https://cannabis-next-js.vercel.app/news" />
+        <meta name="twitter:title" content="Nihal" />
+        <meta name="twitter:description" content="Hello Test" />
+        <meta name="twitter:image" content="https://bountifield.org/wp-content/uploads/2020/03/social-images_Facebook-Photo-1200x630px.jpg.webp" />
+
       </Head>
 
 
