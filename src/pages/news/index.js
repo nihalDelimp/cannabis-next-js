@@ -6,7 +6,6 @@ import axios from 'axios'
 import Pagination from '@/Common/Pagination'
 import NewsPost from './NewsPost'
 import { withoutAuthAxios } from '@/config'
-import MetaTags from 'react-me'
 import Head from 'next/head'
 const index = () => {
 
