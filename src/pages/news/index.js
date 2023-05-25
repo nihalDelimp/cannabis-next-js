@@ -7,7 +7,7 @@ import Pagination from '@/Common/Pagination'
 import NewsPost from './NewsPost'
 import { withoutAuthAxios } from '@/config'
 import Head from 'next/head'
-
+import MetaTags from 'react-meta-tags';
 const index = () => {
   const [data, setdata] = useState([])
   const [postPerPage] = useState(6)
