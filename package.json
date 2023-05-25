@@ -20,6 +20,7 @@
     "fs": "^0.0.1-security",
     "moment": "^2.29.4",
     "next": "13.4.1",
+    "next-seo": "^6.0.0",
     "node-polyfill-webpack-plugin": "^2.0.0",
     "os-browserify": "^0.3.0",
     "path": "^0.12.7",

@@ -7,6 +7,7 @@ import Pagination from '@/Common/Pagination'
 import NewsPost from './NewsPost'
 import { withoutAuthAxios } from '@/config'
 import Head from 'next/head'
+import { NextSeo } from 'next-seo';
 const index = () => {
 
   const [data, setdata] = useState([])
@@ -50,11 +51,11 @@ const index = () => {
   return (
     <div>
 
-                 <Head>
+            {/*     <Head>
                 
-               {/* <title>News Aricle form canabis </title>
+                <title>News Aricle form canabis </title>
 
-  <meta property="og:image"  content={imgurl}    />  */}
+  <meta property="og:image"  content={imgurl}    />
 
 
                 
@@ -78,7 +79,35 @@ const index = () => {
 <meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"/>
 
                  </Head>
+  */}
 
+
+  <Head>
+  <NextSeo
+      title="Podcast Page Title"
+      description="Next SEO PodCast"
+      openGraph={{
+        title: 'Open Graph Audio',
+        description: 'Description of open graph audio',
+        url: 'https://www.example.com/audio/audio',
+        audio: [
+          {
+            url: 'http://examples.opengraphprotocol.us/media/audio/1khz.mp3',
+            secureUrl: 'https://d72cgtgi6hvvl.cloudfront.net/media/audio/1khz.mp3',
+            type: "audio/mpeg"
+          },
+          {
+            url: 'http://examples.opengraphprotocol.us/media/audio/250hz.mp3',
+            secureUrl: 'https://d72cgtgi6hvvl.cloudfront.net/media/audio/250hz.mp3',
+            type: "audio/mpeg"
+          },
+        ]
+       
+      }}
+    />
+    
+
+  </Head>
 
          <section className="hm_banner">
                 <div className="banner_box">
@@ -94,7 +123,7 @@ const index = () => {
                             <div className="leftWrap">
                                 <div className="leftWrapin ">
                                     <div className="cardMain list-wrapper">
-                 <h1>Test</h1>
+                 
              <NewsPost postsData={data}     /> 
     
              </div>
