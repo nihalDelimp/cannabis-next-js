@@ -8,6 +8,14 @@ import NewsPost from './NewsPost'
 import { withoutAuthAxios } from '@/config'
 import Head from 'next/head'
 import { NextSeo } from 'next-seo';
+import { metadata } from 'next';
+
+
+export const metadata = {
+
+  title: 'CananBis Capitol',
+  description: 'CananBis Capitol testing',
+};
 const index = () => {
 
   const [data, setdata] = useState([])
@@ -79,7 +87,7 @@ const index = () => {
 <meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"/>
 
                  </Head>
-  */}
+
 
 
   
@@ -105,7 +113,7 @@ const index = () => {
        
       }}
     />
-    
+    */}
 
   
 
