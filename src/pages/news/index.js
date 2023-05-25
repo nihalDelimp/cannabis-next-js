@@ -6,88 +6,89 @@ import axios from 'axios'
 import Pagination from '@/Common/Pagination'
 import NewsPost from './NewsPost'
 import { withoutAuthAxios } from '@/config'
+import MetaTags from 'react-me'
 import Head from 'next/head'
-import MetaTags from 'react-meta-tags';
-  
-import imageq from "../../assets/advertising_banner.jpg"
-
 const index = () => {
+
   const [data, setdata] = useState([])
   const [postPerPage] = useState(6)
   const [currentPage, setCurrentPage] = useState(1);
   const [totalCount, settotalCount] = useState('')
 
 
-  const getData = async () => {
-
-    await withoutAuthAxios()
+     const getData=async()=>{
+      
+      await withoutAuthAxios()
       .get(`/api/get_news_list?page=${currentPage}&limit=${postPerPage}`)
+       
+      .then((response)=>{
 
-      .then((response) => {
-
-        if (response.data.status == 1) {
-
-          settotalCount(response.data.data.total_count)
+        if(response.data.status==1){
+  
+        settotalCount(response.data.data.total_count) 
           setdata(response.data.data.posts)
         }
-      }, (error) => {
-        console.log("error", error)
-      }).catch((error) => {
-        console.log("error", error)
-      })
+      },(error)=>{
+        console.log("error",error)
+      }).catch((error)=>{
+          console.log("error",error)
+      })  
   }
+   
+ 
 
-
-
-  useEffect(() => {
+  useEffect(()=>{
     getData()
-  }, [currentPage])
+  },[currentPage])
 
   const paginate = (number) => {
-
+ 
     setCurrentPage(number)
   }
-
+    
+  const imgurl="https://images.unsplash.com/photo-1614350292382-c448d0110dfa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
 
   return (
     <div>
-      
-      <MetaTags>
-       
-       <meta name='description' content='justchecking'  />
-       <meta property="og:image" content={imageq} />
-      </MetaTags>
+
+                 <Head>
+                
+                <title>News Aricle form canabis </title>
+
+                <meta property="og:image"  content={imgurl}    />
+
+                 </Head>
 
 
-      <section className="hm_banner">
-        <div className="banner_box">
-
-          <img src='./assets/news-banner.jpg' alt="Na" />
-        </div>
-      </section>
-
-      <section className="wrap_con">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="leftWrap">
-                <div className="leftWrapin ">
-                  <div className="cardMain list-wrapper">
-
-                    <NewsPost postsData={data} />
-
-                  </div>
+         <section className="hm_banner">
+                <div className="banner_box">
+                     
+                    <img src='./assets/news-banner.jpg' alt="Na" />
                 </div>
-              </div>
+            </section>
 
-            </div>
-          </div>
-        </div>
-      </section>
+            <section className="wrap_con">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className="leftWrap">
+                                <div className="leftWrapin ">
+                                    <div className="cardMain list-wrapper">
 
-      <Pagination postsPerPage={postPerPage} totalPosts={totalCount} paginate={paginate} currentPage={currentPage} />
+             <NewsPost postsData={data}     /> 
+    
+             </div>
+             </div>
+             </div>
 
+             </div>
+             </div>
+             </div>
+             </section>
 
+             <Pagination postsPerPage={postPerPage} totalPosts={totalCount} paginate={paginate} currentPage={currentPage} />
+
+    
     </div>
   )
 }
