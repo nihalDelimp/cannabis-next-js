@@ -4,28 +4,48 @@ import axios from 'axios';
 import NewsPost from './NewsPost';
 import { withoutAuthAxios } from '@/config';
 import Pagination from '@/Common/Pagination';
-
+import { NextSeo } from 'next-seo';
 const Index = ({ data, totalCount, currentPage, paginate }) => {
 
   return (
     <div>
-      <Head>
-        <title>Nihal</title>
-        <meta name="description" content="Hello Test" />
 
-        <meta property="og:url" content="https://cannabis-next-js.vercel.app/news" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Nihal" />
-        <meta property="og:description" content="Hello Test" />
-        <meta property="og:image" content="https://bountifield.org/wp-content/uploads/2020/03/social-images_Facebook-Photo-1200x630px.jpg.webp" />
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="cannabis-next-js.vercel.app" />
-        <meta property="twitter:url" content="https://cannabis-next-js.vercel.app/news" />
-        <meta name="twitter:title" content="Nihal" />
-        <meta name="twitter:description" content="Hello Test" />
-        <meta name="twitter:image" content="https://bountifield.org/wp-content/uploads/2020/03/social-images_Facebook-Photo-1200x630px.jpg.webp" />
-      </Head>
+      <NextSeo
+        title="Nihal Chaurasia"
+        description="This is a demo description"
+        canonical="https://cannabis-next-js.vercel.app"
+        openGraph={{
+          url: 'https://cannabis-next-js.vercel.app',
+          title: 'Open Graph Title',
+          description: 'Open Graph Description',
+          images: [
+            {
+              url: 'https://bountifield.org/wp-content/uploads/2020/03/social-images_Facebook-Photo-1200x630px.jpg.webp',
+              width: 800,
+              height: 600,
+              alt: 'Og Image Alt',
+              type: 'image/jpeg',
+            },
+            {
+              url: 'https://bountifield.org/wp-content/uploads/2020/03/social-images_Facebook-Photo-1200x630px.jpg.webp',
+              width: 900,
+              height: 800,
+              alt: 'Og Image Alt Second',
+              type: 'image/jpeg',
+            },
+            { url: 'https://bountifield.org/wp-content/uploads/2020/03/social-images_Facebook-Photo-1200x630px.jpg.webp' },
+            { url: 'https://bountifield.org/wp-content/uploads/2020/03/social-images_Facebook-Photo-1200x630px.jpg.webp' },
+          ],
+          site_name: 'YourSiteName',
+        }}
+        twitter={{
+          handle: '@handle',
+          site: '@site',
+          cardType: 'summary_large_image',
+        }}
+      />
+
 
       <section className="hm_banner">
         <div className="banner_box">
