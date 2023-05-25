@@ -50,21 +50,36 @@ const index = () => {
     setCurrentPage(number)
   }
     
-  const imgurl="https://images.unsplash.com/photo-1614350292382-c448d0110dfa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-
+  const meta = {
+    title: "What is canabis capitol?",
+    description:
+      "canabis  capitol is the next step in the evolution of the internet and, possibly, the organization of society. According to legend, Web 1.0 was the era of decentralized, open protocols, when the majority of internet activity consisted of visiting individual static webpages.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1684848140767-92b247834dc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+    type: "article",
+    twitterHandle: "https://twitter.com/ugwutotheeshoes",
+    date: "17/03/2022"
+  };
   return (
     <div>
 
 <Head>
-<meta property="og:url" content="https://www.example.com"/>
-<meta property="og:title" content="Open Graph Title"/>
-<meta property="og:description" content="Open Graph Description"/>
-<meta property="og:image" content="https://d1zbg1tvj6dkkl.cloudfront.net/images/posts/news/qXrQvulF3mXJExPl09DYOmBWDlUHPN5YTm0NuIw5.jpg"></meta>
-<meta property="og:site_name" content="YourSiteName"></meta>
-<meta name="twitter:card" content="summary_large_image"></meta>
-<meta name="twitter:site" content="@site"></meta>
-<meta name="twitter:creator" content="@handle"></meta>
-</Head>
+        <title>Create Next App</title>
+        <meta property="og:type" content={meta.type} />
+        <meta property="og:site_name" content="What is Web3?" />
+        <meta property="og:description" content={meta.description} />
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:image" content={meta.imageUrl} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content={meta.twitterHandle} />
+        <meta name="twitter:title" content={meta.title} />
+        <meta name="twitter:description" content={meta.description} />
+        <meta name="twitter:image" content={meta.imageUrl} />
+        {meta.date && (
+          <meta property="article:published_time" content={meta.date} />
+        )}
+      </Head>
+
 
    {/*             
                
