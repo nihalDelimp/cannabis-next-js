@@ -1,0 +1,115 @@
+/* footer */
+.footer {
+    background-color: $black;
+    color: $white;
+    .footer_wraper {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+        @media (max-width:991px) {
+            padding-top: 2rem;
+        padding-bottom: 2rem;
+        }
+    }
+    .footColOne {
+        display: flex;
+        .footer_desc {
+            padding-left: 2rem;
+            @media (max-width:991px) {
+                padding: 15px 0;
+            }
+        }
+        img {
+            min-width: 68px;
+        }
+        @media (max-width:991px) {
+            flex-direction: column;
+        }
+    }
+    .sec_title {
+        color: $white;
+        margin: 0 0 15px 0;
+    }
+    .footer_links {
+        padding: 0;
+        list-style: none;
+        li {
+            margin-bottom: 10px;
+            a {
+                @include oswald($textcolor: $white);
+                font-size: 18px;
+                transition: $transititon;
+                &:hover {
+                    color: $base-color;
+                }
+                @media (max-width:991px) {
+                    font-size: 16px; 
+                }
+            }
+        }
+    }
+    .footer_social {
+        a {
+            margin-right: 15px;
+            img {
+                transition: $transititon;   
+                &:hover {
+                    transform: scale(0.8);                    
+                }
+            }
+        }
+    }
+}
+.showLive {
+	aspect-ratio: 0/0;
+	}
+    .newsListItem {
+        width: 100%;
+    }
+
+    .player__video{
+        width:100% !important;
+	    height: auto !important;
+	    aspect-ratio: 16/9;
+    }
+    .production--banner img {
+        width: 100%;
+        height: auto;
+    }
+
+    @media (max-width:991px) {
+        .player__video__tab .newsListItem {
+            width: calc(100%) !important;
+        }
+    }
+
+
+    .footer_social {
+        display: flex;
+        gap: 10px;
+    }	
+        
+    .footer_social a:nth-child(1) img {
+        min-width: 60px;
+    }
+    .footer_social a:last-child img {
+        width: 30px;
+    }
+    .footer .footer_social a {
+        margin-right: 0px !important;
+    }
+    .footer--menu--links {
+        padding-left: 40px;
+    }
+
+    @media (max-width:991px) {
+        .footer--menu--links {
+            padding-left: 15px;
+        }
+    }
+        
+    @media (max-width:767px) {
+        .hm_banner img {
+            height: auto !important;
+        }
+        
+    }
