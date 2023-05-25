@@ -10,6 +10,7 @@ import ResponsivePagination from 'react-responsive-pagination';
 import 'react-responsive-pagination/themes/classic.css';
 import { withoutAuthAxios } from '@/config';
 import dynamic from 'next/dynamic';
+import Head from 'next/head';
 const Home = () => {
    
 
@@ -51,10 +52,30 @@ const paginate = (number) => {
 }
 
 
+const meta = {
+  title: "What is canabis capitol?",
+  description:
+    "canabis  capitol is the next step in the evolution of the internet and, possibly, the organization of society. According to legend, Web 1.0 was the era of decentralized, open protocols, when the majority of internet activity consisted of visiting individual static webpages.",
+  imageUrl:
+    "https://images.unsplash.com/photo-1684848140767-92b247834dc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+  type: "just testing ",
+
+};
+
   return (
     <div>
      
-      
+     <Head>
+        <title>Create Next App</title>
+        <meta property="og:type" content={meta.type} />
+        <meta property="og:site_name" content="What is Web3?" />
+        <meta property="og:description" content={meta.description} />
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:image" content={meta.imageUrl} />
+
+        
+        
+      </Head>
       <section className="hm_banner">
         <div className="banner_box">
 
