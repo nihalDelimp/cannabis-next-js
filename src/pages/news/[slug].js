@@ -3,8 +3,16 @@ import React, { useEffect,useState } from 'react'
 import RightLink from './RightLink'
 import { withoutAuthAxios } from '@/config'
 import { useRouter } from 'next/router'
+import Head from 'next/head'
 
 const NewsData = () => {
+
+
+
+
+     <Head>
+      <meta name='checking' content='testing'  />
+     </Head>
 
     const router=useRouter()
     const [data, setdata] = useState([])
@@ -39,7 +47,9 @@ const NewsData = () => {
                         </div>
                     </div>
                 </section>
-    
+     
+
+     <h1 style={{textAlign:"center"}}>Testing</h1>
     
                 <section className="wrap_con">
                     <div className="container">
