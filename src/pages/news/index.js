@@ -1,56 +1,15 @@
-import Image from 'next/image'
-import React, { useState, useEffect } from 'react'
-import newsBanner from "../../assets/news-banner.jpg"
-import HomePost from '../Home/HomePost'
-import axios from 'axios'
-import Pagination from '@/Common/Pagination'
-import NewsPost from './NewsPost'
-import { withoutAuthAxios } from '@/config'
-import Head from 'next/head'
-const index = () => {
-  const [data, setdata] = useState([])
-  const [postPerPage] = useState(6)
-  const [currentPage, setCurrentPage] = useState(1);
-  const [totalCount, settotalCount] = useState('')
+import React from 'react';
+import Head from 'next/head';
+import axios from 'axios';
+import NewsPost from './NewsPost';
+import { withoutAuthAxios } from '@/config';
+import Pagination from '@/Common/Pagination';
 
-
-  const getData = async () => {
-
-    await withoutAuthAxios()
-      .get(`/api/get_news_list?page=${currentPage}&limit=${postPerPage}`)
-
-      .then((response) => {
-
-        if (response.data.status == 1) {
-
-          settotalCount(response.data.data.total_count)
-          setdata(response.data.data.posts)
-        }
-      }, (error) => {
-        console.log("error", error)
-      }).catch((error) => {
-        console.log("error", error)
-      })
-  }
-
-
-
-  useEffect(() => {
-    getData()
-  }, [currentPage])
-
-  const paginate = (number) => {
-
-    setCurrentPage(number)
-  }
-
+const Index = ({ data, totalCount, currentPage, paginate }) => {
 
   return (
     <div>
-
       <Head>
-
-
         <title>Nihal</title>
         <meta name="description" content="Hello Test" />
 
@@ -66,13 +25,10 @@ const index = () => {
         <meta name="twitter:title" content="Nihal" />
         <meta name="twitter:description" content="Hello Test" />
         <meta name="twitter:image" content="https://bountifield.org/wp-content/uploads/2020/03/social-images_Facebook-Photo-1200x630px.jpg.webp" />
-
       </Head>
-
 
       <section className="hm_banner">
         <div className="banner_box">
-
           <img src='./assets/news-banner.jpg' alt="Na" />
         </div>
       </section>
@@ -84,23 +40,56 @@ const index = () => {
               <div className="leftWrap">
                 <div className="leftWrapin ">
                   <div className="cardMain list-wrapper">
-
                     <NewsPost postsData={data} />
-
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
       </section>
 
-      <Pagination postsPerPage={postPerPage} totalPosts={totalCount} paginate={paginate} currentPage={currentPage} />
-
-
+      <Pagination
+        postsPerPage={6}
+        totalPosts={totalCount}
+        paginate={paginate}
+        currentPage={currentPage}
+      />
     </div>
-  )
+  );
 }
 
-export default index
+export async function getServerSideProps(context) {
+  const { page = 1, limit = 6 } = context.query;
+  const currentPage = parseInt(page, 10);
+
+  try {
+    const response = await withoutAuthAxios().get(`/api/get_news_list?page=${currentPage}&limit=${limit}`);
+    console.log(response.data.data.posts, "Nihalll")
+    console.log(response.data.status, "Helooo")
+    if (response.data.status == 1) {
+      const totalCount = response.data.data.total_count;
+      const data = response.data.data.posts;
+      console.log(response.data.data.posts, "dtatatata")
+      return {
+        props: {
+          data,
+          totalCount,
+          currentPage,
+        },
+      };
+    }
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+
+  return {
+    props: {
+      data: [],
+      totalCount: 0,
+      currentPage: 1,
+    },
+  };
+}
+
+export default Index;
