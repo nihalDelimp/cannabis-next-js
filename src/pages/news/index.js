@@ -8,6 +8,9 @@ import NewsPost from './NewsPost'
 import { withoutAuthAxios } from '@/config'
 import Head from 'next/head'
 import MetaTags from 'react-meta-tags';
+  
+import imageq from "../../assets/advertising_banner.jpg"
+
 const index = () => {
   const [data, setdata] = useState([])
   const [postPerPage] = useState(6)
@@ -49,7 +52,11 @@ const index = () => {
   return (
     <div>
       
-      
+      <MetaTags>
+       
+       <meta name='description' content='justchecking'  />
+       <meta property="og:image" content={imageq} />
+      </MetaTags>
 
 
       <section className="hm_banner">
