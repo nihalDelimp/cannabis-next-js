@@ -82,7 +82,7 @@ const index = () => {
   */}
 
 
-  <Head>
+  
   <NextSeo
       title="Podcast Page Title"
       description="Next SEO PodCast"
@@ -107,7 +107,7 @@ const index = () => {
     />
     
 
-  </Head>
+  
 
          <section className="hm_banner">
                 <div className="banner_box">
