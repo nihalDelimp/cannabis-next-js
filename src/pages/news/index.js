@@ -6,8 +6,26 @@ import axios from 'axios'
 import Pagination from '@/Common/Pagination'
 import NewsPost from './NewsPost'
 import { withoutAuthAxios } from '@/config'
+import Head from 'next/head'
 
 const index = () => {
+
+
+   <Head>
+    <title>Cool Title</title>
+        <meta name="description" content="Checkout our cool page" key="desc" />
+        <meta property="og:title" content="Social Title for Cool Page" />
+        <meta
+          property="og:description"
+          content="And a social description for our cool page"
+        />
+        <meta
+          property="og:image"
+          content="https://example.com/images/cool-page.jpg"
+        />
+
+   </Head>
+
 
   const [data, setdata] = useState([])
   const [postPerPage] = useState(6)
