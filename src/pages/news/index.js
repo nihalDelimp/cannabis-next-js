@@ -7,15 +7,11 @@ import Pagination from '@/Common/Pagination'
 import NewsPost from './NewsPost'
 import { withoutAuthAxios } from '@/config'
 import Head from 'next/head'
-import { NextSeo } from 'next-seo';
-import { metadata } from 'next';
+
+import { CldOgImage } from 'next-cloudinary';
 
 
-export const metadata = {
 
-  title: 'CananBis Capitol',
-  description: 'CananBis Capitol testing',
-};
 const index = () => {
 
   const [data, setdata] = useState([])
@@ -59,14 +55,18 @@ const index = () => {
   return (
     <div>
 
-            {/*     <Head>
+                 <Head>
                 
-                <title>News Aricle form canabis </title>
+<meta property="og:image" content="https://d1zbg1tvj6dkkl.cloudfront.net/images/posts/news/qXrQvulF3mXJExPl09DYOmBWDlUHPN5YTm0NuIw5.jpg" />
+<meta property="og:image:secure_url" content="https://d1zbg1tvj6dkkl.cloudfront.net/images/posts/news/qXrQvulF3mXJExPl09DYOmBWDlUHPN5YTm0NuIw5.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="627" />
+<meta property="twitter:title" content=" " />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://d1zbg1tvj6dkkl.cloudfront.net/images/posts/news/qXrQvulF3mXJExPl09DYOmBWDlUHPN5YTm0NuIw5.jpg" />
+</Head>
 
-  <meta property="og:image"  content={imgurl}    />
-
-
-                
+   {/*             
                
 <title>News Aricle form canabis </title>
 <meta name="title" content="canabis capitol"/>
