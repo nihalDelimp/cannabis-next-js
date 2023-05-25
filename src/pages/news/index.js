@@ -12,17 +12,8 @@ const index = () => {
 
 
    <Head>
-    <title>Cool Title</title>
-        <meta name="description" content="Checkout our cool page" key="desc" />
-        <meta property="og:title" content="Social Title for Cool Page" />
-        <meta
-          property="og:description"
-          content="And a social description for our cool page"
-        />
-        <meta
-          property="og:image"
-          content="https://example.com/images/cool-page.jpg"
-        />
+    
+        
 
    </Head>
 
@@ -66,6 +57,17 @@ const index = () => {
 
   return (
     <div>
+      
+      <Head>
+        <meta name="description" content="This is the description of my page" />
+        <meta property="og:title" content="My Page" />
+        <meta property="og:description" content="This is the description of my page" />
+        <meta property="og:image" content="testing" />
+        <meta property="abcd" content="checking" />
+        
+      </Head>
+
+
          <section className="hm_banner">
                 <div className="banner_box">
                      
