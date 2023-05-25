@@ -11,7 +11,7 @@ export default function Document() {
         <meta property="og:url" content="https://www.example.com" />
         <meta property="og:title" content="Open Graph Title" />
         <meta property="og:description" content="Open Graph Description" />
-        <meta property="og:image" content="https://www.example.com/og-image.jpg" />
+        <meta property="og:image" content="https://d1zbg1tvj6dkkl.cloudfront.net/images/posts/news/qXrQvulF3mXJExPl09DYOmBWDlUHPN5YTm0NuIw5.jpg" />
         <meta property="og:site_name" content="YourSiteName" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@site" />
