@@ -9,92 +9,78 @@ import { withoutAuthAxios } from '@/config'
 import Head from 'next/head'
 import MetaTags from 'react-meta-tags';
 const index = () => {
-
-
-   <Head>
-    
-        
-
-   </Head>
-
-
   const [data, setdata] = useState([])
   const [postPerPage] = useState(6)
   const [currentPage, setCurrentPage] = useState(1);
   const [totalCount, settotalCount] = useState('')
 
 
-     const getData=async()=>{
-      
-      await withoutAuthAxios()
-      .get(`/api/get_news_list?page=${currentPage}&limit=${postPerPage}`)
-       
-      .then((response)=>{
+  const getData = async () => {
 
-        if(response.data.status==1){
-  
-        settotalCount(response.data.data.total_count) 
+    await withoutAuthAxios()
+      .get(`/api/get_news_list?page=${currentPage}&limit=${postPerPage}`)
+
+      .then((response) => {
+
+        if (response.data.status == 1) {
+
+          settotalCount(response.data.data.total_count)
           setdata(response.data.data.posts)
         }
-      },(error)=>{
-        console.log("error",error)
-      }).catch((error)=>{
-          console.log("error",error)
-      })  
+      }, (error) => {
+        console.log("error", error)
+      }).catch((error) => {
+        console.log("error", error)
+      })
   }
-   
- 
 
-  useEffect(()=>{
+
+
+  useEffect(() => {
     getData()
-  },[currentPage])
+  }, [currentPage])
 
   const paginate = (number) => {
- 
+
     setCurrentPage(number)
   }
-    
+
 
   return (
     <div>
       
       
-      <MetaTags>
-       <title>NewsArticle</title>
-       <meta name ="description"  content='Mumbai in Qualifier 2 after Madhwal knocks LSG out with incredible 5 for 5'/>
-      
-      </MetaTags>
 
 
-         <section className="hm_banner">
-                <div className="banner_box">
-                     
-                    <img src='./assets/news-banner.jpg' alt="Na" />
+      <section className="hm_banner">
+        <div className="banner_box">
+
+          <img src='./assets/news-banner.jpg' alt="Na" />
+        </div>
+      </section>
+
+      <section className="wrap_con">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="leftWrap">
+                <div className="leftWrapin ">
+                  <div className="cardMain list-wrapper">
+
+                    <NewsPost postsData={data} />
+
+                  </div>
                 </div>
-            </section>
+              </div>
 
-            <section className="wrap_con">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <div className="leftWrap">
-                                <div className="leftWrapin ">
-                                    <div className="cardMain list-wrapper">
+            </div>
+          </div>
+        </div>
+      </section>
 
-             <NewsPost postsData={data}     /> 
-    
-             </div>
-             </div>
-             </div>
+      <Pagination postsPerPage={postPerPage} totalPosts={totalCount} paginate={paginate} currentPage={currentPage} />
 
-             </div>
-             </div>
-             </div>
-             </section>
 
-             <Pagination postsPerPage={postPerPage} totalPosts={totalCount} paginate={paginate} currentPage={currentPage} />
-
-    
     </div>
   )
 }
