@@ -1,5 +1,4 @@
 import { Html, Head,Main, NextScript } from 'next/document'
-import Script from 'next/script'
 
 export default function Document() {
   
@@ -18,11 +17,11 @@ export default function Document() {
     
       <Head>
         <title>Create Next App</title>
-        <meta property="og:type" content={meta.type} />
-        <meta property="og:site_name" content="What is Web3?" />
-        <meta property="og:description" content={meta.description} />
-        <meta property="og:title" content={meta.title} />
-        <meta property="og:image" content={meta.imageUrl} />
+        <meta property="og:type" content={meta.type} key="ogtype" />
+        <meta property="og:site_name" content="What is Web3?" key="ogsitename" />
+        <meta property="og:description" content={meta.description} key="ogdesc" />
+        <meta property="og:title" content={meta.title} key="ogtitle" />
+        <meta property="og:image" content={meta.imageUrl} key="ogimage"  />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="" />
         <meta name="twitter:title" content={meta.title} />
