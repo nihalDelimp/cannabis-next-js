@@ -10,9 +10,7 @@ const NewsData = () => {
 
 
 
-     <Head>
-      <meta name='checking' content='testing'  />
-     </Head>
+     
 
     const router=useRouter()
     const [data, setdata] = useState([])
