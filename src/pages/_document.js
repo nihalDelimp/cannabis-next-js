@@ -34,8 +34,8 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"  strategy="beforeInteractive" />
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"   strategy="beforeInteractive" /> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"   />
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"    /> 
        
    
       </body>
