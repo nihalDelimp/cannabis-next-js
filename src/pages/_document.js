@@ -1,6 +1,6 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import { Html, Main, NextScript } from 'next/document'
 import Script from 'next/script'
-
+import Head from 'next/head';
 export default function Document() {
   
   const meta = {
@@ -15,7 +15,7 @@ export default function Document() {
    
   return (
     <Html lang="en">
-      <Head >
+    
       <Head>
         <title>Create Next App</title>
         <meta property="og:type" content={meta.type} />
@@ -30,7 +30,7 @@ export default function Document() {
         <meta name="twitter:image" content={meta.imageUrl} />
      
       </Head>     
-      </Head>
+     
 
       <body>
         <Main />
