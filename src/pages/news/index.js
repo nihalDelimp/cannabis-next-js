@@ -72,51 +72,17 @@ const index = () => {
 
    {/*             
                
-<title>News Aricle form canabis </title>
-<meta name="title" content="canabis capitol"/>
-<meta name="description" content="canabis capitol is a game "/>
-
-
-<meta property="og:type" content="website"/>
-<meta property="og:url" content="https://metatags.io/"/>
-<meta property="og:title" content="canabis capitol"/>
-<meta property="og:description" content="canabis capitol is a game "/>
-<meta property="og:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"/>
-
-
-<meta property="twitter:card" content="summary_large_image"/>
-<meta property="twitter:url" content="https://metatags.io/"/>
-<meta property="twitter:title" content="canabis capitol"/>
-<meta property="twitter:description" content="canabis capitol is a game "/>
-<meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"/>
-
-                 </Head>
-
-
-
-  
-  <NextSeo
-      title="Podcast Page Title"
-      description="Next SEO PodCast"
-      openGraph={{
-        title: 'Open Graph Audio',
-        description: 'Description of open graph audio',
-        url: 'https://www.example.com/audio/audio',
-        audio: [
-          {
-            url: 'http://examples.opengraphprotocol.us/media/audio/1khz.mp3',
-            secureUrl: 'https://d72cgtgi6hvvl.cloudfront.net/media/audio/1khz.mp3',
-            type: "audio/mpeg"
-          },
-          {
-            url: 'http://examples.opengraphprotocol.us/media/audio/250hz.mp3',
-            secureUrl: 'https://d72cgtgi6hvvl.cloudfront.net/media/audio/250hz.mp3',
-            type: "audio/mpeg"
-          },
-        ]
-       
-      }}
-    />
+        <title>Create Next App</title>
+        <meta property="og:type" content={meta.type} key="ogtype" />
+        <meta property="og:site_name" content="What is Web3?" key="ogsitename" />
+        <meta property="og:description" content={meta.description} key="ogdesc" />
+        <meta property="og:title" content={meta.title} key="ogtitle" />
+        <meta property="og:image" content={meta.imageUrl} key="ogimage"  />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="" />
+        <meta name="twitter:title" content={meta.title} />
+        <meta name="twitter:description" content={meta.description} />
+        <meta name="twitter:image" content={meta.imageUrl} />
     */}
 
   
