@@ -33,7 +33,7 @@ export default function Document(props) {
       </Head>    
        
        */}
-     
+     <Head/>
 
       <body>
         <Main />
