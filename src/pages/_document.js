@@ -3,12 +3,12 @@ import { Html, Head,Main, NextScript } from 'next/document'
 export default function Document() {
   
   const meta = {
-    title: "What is canabis capitol?",
+    title: "canabis ",
     description:
       "canabis  capitol is the next step in the evolution of the internet and, possibly, the organization of society. According to legend, Web 1.0 was the era of decentralized, open protocols, when the majority of internet activity consisted of visiting individual static webpages.",
     imageUrl:
-      "https://d1zbg1tvj6dkkl.cloudfront.net/images/posts/news/qXrQvulF3mXJExPl09DYOmBWDlUHPN5YTm0NuIw5.jpg",
-    type: "just testing ",
+      "https://images.unsplash.com/photo-1685371863623-effd71822cf2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+    type: "just checking ",
   
   };
    
@@ -28,7 +28,8 @@ export default function Document() {
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.imageUrl} />
      
-      </Head>     
+      </Head>    
+       
      
 
       <body>
