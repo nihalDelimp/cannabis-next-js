@@ -1,7 +1,9 @@
 import { Html, Head,Main, NextScript } from 'next/document'
 
-export default function Document() {
-  
+export default function Document(props) {
+
+ 
+  /*
   const meta = {
     title: "canabis ",
     description:
@@ -10,12 +12,12 @@ export default function Document() {
       "https://d1zbg1tvj6dkkl.cloudfront.net/images/posts/news/K5mPhDaHCsQ3m0vtNx7mextD7gUSZqJgMnS78YOX.png",
     type: "just checking ",
   
-  };
+  };*/
    
   return (
     <Html lang="en">
     
-      <Head>
+    {/*  <Head>
         <title>Create Next App</title>
         <meta property="og:type" content={meta.type} key="ogtype" />
         <meta property="og:site_name" content="What is Web3?" key="ogsitename" />
@@ -30,6 +32,7 @@ export default function Document() {
      
       </Head>    
        
+       */}
      
 
       <body>
